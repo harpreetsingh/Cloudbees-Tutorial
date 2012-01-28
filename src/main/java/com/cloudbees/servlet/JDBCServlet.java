@@ -64,7 +64,7 @@ public class JDBCServlet extends HttpServlet {
             rst = dao.getCapital("India");
             if (rst !=null ) {
                 while (rst.next()) {
-                    String foo = rst.getString("CAPTIAL");
+                    String foo = rst.getString("CAPITAL");
                  
                     out.println(foo + "<br/>");
                 }
@@ -81,7 +81,7 @@ public class JDBCServlet extends HttpServlet {
     }
 
     void prefixHTML(PrintWriter out) {
-        out.println("<html><head><title>Hello JPA CloudBees</title></head><body>");
+        out.println("<html><head><title>Hello Servlet CloudBees</title></head><body>");
     }
 
     void postfixHTML(PrintWriter out) {

@@ -1,14 +1,21 @@
 <?xml version="1.0"?>
 <cloudbees-web-app xmlns="http://www.cloudbees.com/xml/webapp/1">
-    <appid>webinar/cloudbeesTutorial</appid>
+    <appid>tutorial/cloudbeesTutorial</appid>
     <context-param>
         <param-name>application.environment</param-name>
         <param-value>prod</param-value>
     </context-param>
-    <resource name="jdbc/database" auth="Container" type="javax.sql.DataSource">
+  <!--  <resource name="jdbc/database" auth="Container" type="javax.sql.DataSource">
         <param name="username" value="bees" />
         <param name="password" value="bees" />
         <param name="url" value="jdbc:derby://localhost:1527/countries" />
         <param name="driverClassName" value="org.apache.derby.jdbc.ClientDriver"/>
+    </resource>
+    -->
+    <resource name="jdbc/database" auth="Container" type="javax.sql.DataSource">
+        <param name="username" value="cb_tutorial" />
+        <param name="password" value="cb_tutorial" />
+        <param name="url" value="jdbc:cloudbees://tutorial_dev" />
+    <!--    <param name="driverClassName" value="org.apache.derby.jdbc.ClientDriver"/> -->
     </resource>
 </cloudbees-web-app>

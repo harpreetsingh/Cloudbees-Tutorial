@@ -35,6 +35,10 @@ public class DAO {
         }
 
     }
+    
+    public void setConnection (Connection c){
+        conn = c;
+    }
 
     public ResultSet getAll() {
         ResultSet rst = null; 
@@ -51,7 +55,7 @@ public class DAO {
         ResultSet rst = null; 
         try{
             stmt = conn.createStatement();
-            rst = stmt.executeQuery("SELECT CAPTIAL FROM COUNTRIES WHERE COUNTRY = '"+ country+"'");
+            rst = stmt.executeQuery("SELECT CAPITAL FROM COUNTRIES WHERE COUNTRY = '"+ country+"'");
         } catch (Exception e){
             e.printStackTrace ();
         } 

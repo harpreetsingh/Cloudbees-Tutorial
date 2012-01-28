@@ -83,7 +83,7 @@ public class JPAServlet extends HttpServlet {
             Iterator iterator = c.iterator();
             while (iterator.hasNext()) {
                 Countries country = (Countries) iterator.next();
-                out.println("<b>" + country.getCaptial() + "</b> is the capital of " + country.getCountry() + "<br/>");
+                out.println("<b>" + country.getCapital() + "</b> is the capital of " + country.getCountry() + "<br/>");
             }
         } catch (Exception e) {
             out.println(e.toString());

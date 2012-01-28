@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Countries.findAll", query = "SELECT c FROM Countries c"),
     @NamedQuery(name = "Countries.findById", query = "SELECT c FROM Countries c WHERE c.id = :id"),
     @NamedQuery(name = "Countries.findByCountry", query = "SELECT c FROM Countries c WHERE c.country = :country"),
-    @NamedQuery(name = "Countries.findByCaptial", query = "SELECT c FROM Countries c WHERE c.captial = :captial")})
+    @NamedQuery(name = "Countries.findByCapital", query = "SELECT c FROM Countries c WHERE c.capital = :capital")})
 public class Countries implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -24,8 +24,8 @@ public class Countries implements Serializable {
     private Integer id;
     @Column(name = "COUNTRY")
     private String country;
-    @Column(name = "CAPTIAL")
-    private String captial;
+    @Column(name = "CAPITAL")
+    private String capital;
 
     public Countries() {
     }
@@ -50,12 +50,12 @@ public class Countries implements Serializable {
         this.country = country;
     }
 
-    public String getCaptial() {
-        return captial;
+    public String getCapital() {
+        return capital;
     }
 
-    public void setCaptial(String captial) {
-        this.captial = captial;
+    public void setCapital(String capital) {
+        this.capital = capital;
     }
 
     @Override
